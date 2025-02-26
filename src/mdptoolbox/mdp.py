@@ -1364,7 +1364,8 @@ class ValueIteration(MDP):
         if self.discount < 1:
             # compute a bound for the number of iterations and update the
             # stored value of self.max_iter
-            self._boundIter(epsilon)
+            # self._boundIter(epsilon)
+            self.max_iter = max_iter
             # computation of threshold of variation for V for an epsilon-
             # optimal policy
             self.thresh = epsilon * (1 - self.discount) / self.discount
